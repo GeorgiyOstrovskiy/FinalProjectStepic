@@ -15,4 +15,4 @@ class ProductPageLocators:
     MESSAGE_PRODUCT = (By.XPATH, "//div[@id='messages']/div[1]/div/strong")
     MESSAGE_PRICE = (By.XPATH, "//div[@id='messages']/div[3]/div/p/strong")
     NAME_PRODUCT = (By.CSS_SELECTOR, ".product_main h1")
-    PRICE_PRODUCT = (By.CLASS_NAME, "price_color")
+    PRICE_PRODUCT = (By.CSS_SELECTOR, "p.price_color")

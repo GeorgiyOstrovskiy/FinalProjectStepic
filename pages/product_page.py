@@ -8,10 +8,16 @@ class ProductPage(BasePage):
 
     def should_be_correct_name_product(self):
         message_product = self.browser.find_element(*ProductPageLocators.MESSAGE_PRODUCT).text
-        default_product_name = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT).text
-        assert default_product_name in message_product, "Name product incorrect"
+        assert self.find_out_default_name_of_the_product() == message_product, "Name product incorrect"
 
     def should_be_correct_price_product(self):
         message_price = self.browser.find_element(*ProductPageLocators.MESSAGE_PRICE).text
+        assert self.find_out_default_price_of_the_product() == message_price, "Price product incorrect"
+
+    def find_out_default_price_of_the_product(self):
         default_price_name = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT).text
-        assert default_price_name in message_price, "Price product incorrect"
+        return default_price_name
+
+    def find_out_default_name_of_the_product(self):
+        default_product_name = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT).text
+        return default_product_name
