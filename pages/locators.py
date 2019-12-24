@@ -17,3 +17,7 @@ class ProductPageLocators:
     NAME_PRODUCT = (By.CSS_SELECTOR, ".product_main h1")
     PRICE_PRODUCT = (By.CSS_SELECTOR, "p.price_color")
     MESSAGE_SUCCESS = (By.XPATH, "//div[@id='messages']/div[1]/div[@class='alertinner ']")
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.ID, "login_link")
